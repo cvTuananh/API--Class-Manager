@@ -16,3 +16,5 @@ Admin:
 + send mail user affter register account and register class
 + review and approve course application
 + auto send mail remind
+
+UI use famework Angular 
