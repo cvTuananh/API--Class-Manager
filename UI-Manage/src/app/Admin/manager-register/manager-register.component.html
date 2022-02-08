@@ -1,0 +1,27 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="container">
+    <div class="row col-md-9 col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+    <thead>
+    <a href="#" class="btn btn-primary btn-xs pull-right"><b>+</b> Add new categories</a>
+        <tr>
+            <th>ID</th>
+            <th>Name User</th>
+            <th>Name Class</th>
+            <th>Status</th>
+            <th>avatar</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+            <tr *ngFor="let list of listRe" >
+                <td>{{list.id}}</td>
+                <td>{{list.name}}</td>
+                <td >{{list.class.name}}</td>
+                <td>{{list.status}}</td>
+                <td>{{list.class.id}}</td>
+                <td><img src="http://localhost:30/api/v1/profile/avatar/{{list.user.avatar}}"/></td>
+                <td class="text-center"><button class='btn btn-info btn-xs' (click)="acpect(list.id)" ><span class="glyphicon glyphicon-edit"></span>accept</button> <button class="btn btn-danger btn-xs" (click)="reject(list.id)" ><span class="glyphicon glyphicon-remove"></span>Reject</button></td>
+            </tr>
+    </table>

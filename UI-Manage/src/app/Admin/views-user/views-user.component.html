@@ -1,0 +1,19 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="container">
+    <div class="row col-md-9 col-md-offset-2 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Number</th>
+            <th>Name Student</th>
+            <th>Name Class</th>
+        </tr>
+    </thead>
+            <tr *ngFor="let views of dataUser; let i = index" >
+                <td>{{i}}</td>
+                <td >{{views.user.name}}</td>
+                <td>{{views.class.name}}</td>
+            </tr>
+    </table>

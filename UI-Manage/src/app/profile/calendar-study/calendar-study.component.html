@@ -1,0 +1,19 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="container">
+    <div class="row col-md-7 col-md-offset-1 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Name Class</th>
+            <th>LessonStart</th>
+            <th>LessonEnd</th>
+        </tr>
+    </thead>
+            <tr *ngFor="let class of calendarUser[0]">
+                <td>{{class.name}}</td>
+                <td><div>{{class.calendars[0].lessonStart}}h</div></td>
+                <td><div>{{class.calendars[0].lessonEnd}}h</div></td>
+            </tr>
+    </table>

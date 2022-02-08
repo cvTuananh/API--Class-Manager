@@ -1,0 +1,33 @@
+<section class="get-in-touch">
+    <h1 class="title">Create Class</h1>
+    <div class="contact-form row">
+       <div class="form-field col-lg-6">
+          <input id="name" class="input-text js-input" type="text" required name="name" [(ngModel)]="name">
+          <label class="label" for="name">Name</label>
+       </div>
+       <div class="form-field col-lg-6 ">
+          <input id="email" class="input-text js-input" type="number" required [(ngModel)]="limit" name="limit">
+          <label class="label" for="email">Limit</label>
+       </div>
+       <div class="form-field col-lg-6 ">
+         <input id="company" class="input-text js-input" type="day" required  [(ngModel)]="week" name="week">
+         <label class="label" for="company">Day</label>
+      </div>
+       <div class="form-field col-lg-6 ">
+          <input id="company" class="input-text js-input" type="time" required  [(ngModel)]="lessonStart" name="lessonStart">
+          <label class="label" for="company">Lesson Start</label>
+       </div>
+        <div class="form-field col-lg-6 ">
+          <input id="phone" class="input-text js-input" type="time" required  [(ngModel)]="lessonEnd" name="lessonEnd">
+          <label class="label" for="phone">Lesson End</label>
+       </div>
+       <div class="form-field col-lg-12">
+          <input id="message" class="input-text js-input" type="text" required>
+          <label class="label" for="message">Note</label>
+       </div>
+       <div class="form-field col-lg-12">
+          <input class="submit-btn" type="submit" value="Create" (click)="create()">
+       </div>
+    </div>
+ </section>
+ 

@@ -1,0 +1,23 @@
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div class="container">
+    <div class="row col-md-7 col-md-offset-1 custyle">
+    <table class="table table-striped custab">
+    <thead>
+        <tr>
+            <th>Name Class</th>
+            <th>Limit</th>
+            <th>LessonStart</th>
+            <th>LessonEnd</th>
+            <th class="text-center">Action</th>
+        </tr>
+    </thead>
+            <tr *ngFor="let classed of class">
+                <td>{{classed.name}}</td>
+                <td >{{classed.limit}}</td>
+                <td><div class="text-center" *ngFor="let calendar of classed.calendars">{{calendar.lessonStart}}h</div></td>
+                <td><div class="text-center" *ngFor="let calendar of classed.calendars">{{calendar.lessonEnd}}h</div></td>
+                <td class="text-center"><button class='btn btn-info btn-xs' (click)="classRegister(classed.id)" ><span class="glyphicon glyphicon-edit"></span> Register</button></td>
+            </tr>
+    </table>
